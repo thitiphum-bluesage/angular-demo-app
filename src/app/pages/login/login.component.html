@@ -1,0 +1,36 @@
+<div class="min-h-screen flex items-center justify-center bg-gray-200">
+  <div class="bg-white p-8 rounded shadow-md w-96">
+    <h2 class="text-center text-2xl font-bold mb-4">Login</h2>
+
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div class="mb-4">
+        <label class="block mb-2" for="username">Username</label>
+        <input
+          type="text"
+          id="username"
+          formControlName="username"
+          class="w-full px-3 py-2 border rounded-md"
+          placeholder="Enter your username"
+        />
+      </div>
+
+      <div class="mb-4">
+        <label class="block mb-2" for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          formControlName="password"
+          class="w-full px-3 py-2 border rounded-md"
+          placeholder="Enter your password"
+        />
+      </div>
+
+      <button
+        type="submit"
+        class="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600"
+      >
+        Login
+      </button>
+    </form>
+  </div>
+</div>
