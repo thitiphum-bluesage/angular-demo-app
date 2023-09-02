@@ -1,0 +1,14 @@
+<div class="container">
+  <p>posts works!</p>
+  <div class="grid grid-cols-4 gap-4">
+    <div
+      *ngFor="let post of posts"
+      class="lg:col-span-4 md:col-span-2 sm:col-span-3 border-2 border-indigo-500 rounded-md p-4"
+    >
+      <a [routerLink]="['/post', post.id]"
+        ><h3 class="font-bold">{{ post.title }}</h3></a
+      >
+      <p>{{ post.body }}</p>
+    </div>
+  </div>
+</div>
